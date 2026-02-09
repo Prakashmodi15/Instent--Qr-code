@@ -1,0 +1,67 @@
+===================================================
+COMPLETE QR CODE GENERATOR - INSTALLATION GUIDE
+===================================================
+
+STEP 1: INSTALL COMPOSER (if not installed)
+-------------------------------------------
+Download from: https://getcomposer.org/download/
+or run:
+php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
+php composer-setup.php
+php -r "unlink('composer-setup.php');"
+
+STEP 2: INSTALL DEPENDENCIES
+----------------------------
+Open terminal/command prompt in project folder and run:
+
+composer require endroid/qr-code
+composer require bacon/bacon-qr-code
+composer require simplesoftwareio/simple-qrcode
+
+STEP 3: CREATE FOLDERS
+----------------------
+Create these folders in your project:
+- uploads/     (for logo uploads)
+- qrcodes/     (for generated QR codes)
+- batch_qrcodes/ (for batch generation)
+
+STEP 4: SET PERMISSIONS
+-----------------------
+Make sure folders are writable:
+chmod 777 uploads qrcodes batch_qrcodes
+
+STEP 5: RUN THE GENERATOR
+-------------------------
+Open browser and visit:
+http://yourdomain.com/qr_generator.php
+
+FEATURES:
+---------
+1. Text QR Codes
+2. URL QR Codes
+3. WhatsApp QR Codes
+4. Email QR Codes
+5. WiFi QR Codes
+6. Contact QR Codes
+7. Custom Colors
+8. Logo Support
+9. Error Correction
+10. Batch Generation
+
+TROUBLESHOOTING:
+----------------
+1. If you get class not found error:
+   Run: composer dump-autoload
+   
+2. If logo not working:
+   Check if GD library is installed: php -m | grep gd
+   
+3. For large QR codes, increase memory:
+   Add to php.ini: memory_limit = 256M
+
+SUPPORTED PHP VERSIONS:
+-----------------------
+PHP 7.3 or higher recommended
+PHP 5.6+ may work with older versions
+
+===================================================
